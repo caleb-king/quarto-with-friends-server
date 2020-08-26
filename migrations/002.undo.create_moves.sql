@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS moves;
+DROP TYPE IF EXISTS move_type;
