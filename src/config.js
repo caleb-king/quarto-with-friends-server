@@ -4,5 +4,6 @@ module.exports = {
   DATABASE_URL:
     process.env.DATABASE_URL || 'postgresql://quarto@localhost/quarto',
   TEST_DATABASE_URL: 'postgresql://quarto-test@localhost/quarto-test',
+  // CLIENT_ORIGIN: 'http://localhost:3000',
   CLIENT_ORIGIN: 'https://quarto-with-friends.vercel.app/',
 };

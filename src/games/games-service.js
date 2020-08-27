@@ -19,7 +19,9 @@ const GamesService = {
   updateGame(knex, id, newGameFields) {
     return knex('games')
       .where({ id })
-      .update(newGameFields);
+      .update(newGameFields)
+      .returning('*')
+      .then(rows => rows[0]);
   },
 };
 

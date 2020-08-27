@@ -65,8 +65,8 @@ gamesRouter
     const gameToUpdate = { gameId, host, guest };
 
     GamesService.updateGame(req.app.get('db'), req.params.gameId, gameToUpdate)
-      .then(numRowsAffected => {
-        res.status(204).end();
+      .then(game => {
+        res.status(201).json(game);
       })
       .catch(next);
   });
