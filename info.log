@@ -1,2 +1,16 @@
 {"message":"Unauthorized request to path: /","level":"error"}
 {"message":"Unauthorized request to path: /favicon.ico","level":"error"}
+{"message":"Game with id 6f10451b-d61a-43f5-a4b7-af94d5b0a49b created.","level":"info"}
+{"message":"host is required","level":"error"}
+{"message":"gameId is required","level":"error"}
+{"message":"Move with id undefined created.","level":"info"}
+{"message":"undefined move with value undefined created.","level":"info"}
+{"message":"move: placement","level":"info"}
+{"message":"move: [object Object]","level":"info"}
+{"message":"placement move with value 3 created.","level":"info"}
+{"message":"selection move with value of 3 created.","level":"info"}
+{"message":"placement move with value of 12 created.","level":"info"}
+{"message":"selection move with value of 12 created.","level":"info"}
+{"message":"Game with id 6f10451b-d61a-43f5-a4b7-af94d5b0a49b created.","level":"info"}
+{"message":"selection move with value of 12 created.","level":"info"}
+{"message":"placement move with value of 4 created.","level":"info"}

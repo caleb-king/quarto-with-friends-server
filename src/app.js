@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { CLIENT_ORIGIN } = require('./config');
 const { NODE_ENV } = require('./config');
+const gamesRouter = require('./games/games-router');
 
 const app = express();
 
@@ -20,6 +21,8 @@ app.use(
 );
 
 app.use(helmet());
+
+app.use(gamesRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello, world!');
