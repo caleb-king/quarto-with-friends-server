@@ -66,7 +66,7 @@ gamesRouter
 
     GamesService.updateGame(req.app.get('db'), req.params.gameId, gameToUpdate)
       .then(game => {
-        res.status(201).json(game);
+        res.status(200).json(game);
       })
       .catch(next);
   });
