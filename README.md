@@ -1,26 +1,105 @@
-# Express Boilerplate!
+# Quarto With Friends API
 
-This is a boilerplate project used for starting new projects!
+## Resources
 
-## Set up
+There are two main resources accessible through the Quarto With Friends API:
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+1) Games
+2) Moves
 
-1. Clone this repository to your local machine `git clone https://github.com/caleb-king/express-boilerplate.git NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+An example game:
+> {<br>
+  id: 'e1564da3-797a-4fb1-975e-4f3935d7eeca' ,<br>
+  host: 'Caleb' ,<br>
+  guest: 'Toby' ,<br>
+}
+
+An example move:
+> {<br>
+  id: 24 ,<br>
+  gameId: 'e1564da3-797a-4fb1-975e-4f3935d7eeca' ,<br>
+  moveType: 'selection' ,<br>
+  value: 7 ,<br>
+}
+
+<br>
+
+## Available Endpoints
+
+### Base URL : `'https://obscure-harbor-97497.herokuapp.com'`
+
+### Route: `/games`
+
+* `GET '/games'`
+* `POST '/games'`
+
+### Route: `/games/:gameId`
+
+* `GET '/games/:gameId'`
+* `PATCH '/games/:gameId'`
+
+### Route: `/games/:gameId/moves`
+
+* `GET '/games/:gameId/moves'`
+* `POST '/games/:gameId/moves'`
+* `DELETE '/games/:gameId/moves'`
+
+<br>
 
 ## Scripts
 
 Start the application `npm start`
 
-Start nodemon for the application `npm run dev`
-
 Run the tests `npm test`
 
-## Deploying
+<br>
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+## Technical Requirements
+
+* Uses React, Node, Express, and PostgreSQL.
+* The client and API are deployed separately and stored in separate GitHub repos. (The GitHub for the client can be found [here](https://github.com/caleb-king/quarto-with-friends))
+* Uses a responsive and mobile-first design.
+* Uses semantic HTML/JSX.
+* Uses vanilla CSS for styling.
+* Both client- and server-side code is tested.
+* Includes a landing page that explains what the app does and how to get started.
+* Is live and publicly-accessible.
+* Follows a11y best practices.
+* Works across different browsers. (Chrome, Firefox, and Safari)
+
+<br><br>
+
+# Quarto With Friends Client
+* [live app](https://quarto-with-friends.vercel.app/)
+
+## Summary
+
+<br>
+
+Quarto With Friends is a web app which provides a way to remotely play the game Quarto with a friend. You share the link and then alternate turns selecting and placing pieces until a winner is declared. 
+
+Quarto is a modern classic strategy game using pieces which combine 4 attributes – size, color, shape, and consistency:
+
+<br>
+
+<a href="Comparing Attributes"><img src="public/attribute-comparison.png" width="360" ></a><br><br>
+
+The goal is to place the fourth piece in a row or diagonal where each piece shares one attribute in common.
+
+The twist is that your opponent chooses the piece you place on the board each turn.
+<br><br>
+## Screenshots
+
+<br>
+
+**Game Setup:**
+
+<a href="Game Setup"><img src="public/screenshots/game-setup-screenshot.png" width="360" ></a><br><br><br>
+
+**Gameplay:**
+
+<a href="Game Play"><img src="public/screenshots/gameplay-screenshot.png" width="360" ></a><br><br><br>
+
+**Winner: (with neon dancing GIF)** 
+
+<a href="Game Play"><img src="public/screenshots/winning-screenshot.png" width="360" ></a><br><br><br>
